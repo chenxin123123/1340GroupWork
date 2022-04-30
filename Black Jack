@@ -8,7 +8,7 @@ void initial()
   int number_of_players;
   cout << "Number of Players(2-4) : ";
   cin >> number_of_players;
-  while (number_of_players < 2 or number_of_players > 4)
+  while (number_of_players < 1 or number_of_players > 4)
   {
     cout << "Incorrect number of players"
     cout << "Number of Players(2-4) : ";
