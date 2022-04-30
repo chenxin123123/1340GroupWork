@@ -1,17 +1,24 @@
 #include <iostream>
+#include <cstdlib>      // for calling srand(), rand()
+#include <ctime>        
 
 using namespace std;
+
+#define SPADE   "\xE2\x99\xA0"
+#define CLUB    "\xE2\x99\xA3"
+#define HEART   "\xE2\x99\xA5"
+#define DIAMOND "\xE2\x99\xA6"
 
 void initial()
 {
   cout << "******Welcome to the game of Black Jack******" << endl;
   int number_of_players;
-  cout << "Number of Players(1-4) : ";
+  cout << "Number of Players(1-3) : ";
   cin >> number_of_players;
-  while (number_of_players < 1 or number_of_players > 4)
+  while (number_of_players < 1 or number_of_players > 3)
   {
-    cout << "Incorrect number of players"
-    cout << "Number of Players(1-4) : ";
+    cout << "Incorrect number of players" << endl;
+    cout << "Number of Players(1-3) : ";
     cin >> number_of_players;
   }
 }
@@ -19,5 +26,5 @@ void initial()
 int main()
 {
   initial();
-
+  
 }
