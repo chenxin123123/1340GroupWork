@@ -6,12 +6,12 @@ void initial()
 {
   cout << "******Welcome to the game of Black Jack******" << endl;
   int number_of_players;
-  cout << "Number of Players(2-4) : ";
+  cout << "Number of Players(1-4) : ";
   cin >> number_of_players;
   while (number_of_players < 1 or number_of_players > 4)
   {
     cout << "Incorrect number of players"
-    cout << "Number of Players(2-4) : ";
+    cout << "Number of Players(1-4) : ";
     cin >> number_of_players;
   }
 }
