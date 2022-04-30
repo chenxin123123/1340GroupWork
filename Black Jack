@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+void initial()
+{
+  cout << "******Welcome to the game of Black Jack******" << endl;
+  int number_of_players;
+  cout << "Number of Players(2-4) : ";
+  cin >> number_of_players;
+  while (number_of_players < 2 or number_of_players > 4)
+  {
+    cout << "Incorrect number of players"
+    cout << "Number of Players(2-4) : ";
+    cin >> number_of_players;
+  }
+}
+
+int main()
+{
+  initial();
+
+}
