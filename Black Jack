@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>      // for calling srand(), rand()
-#include <ctime>        
+#include <ctime>
 
 using namespace std;
 
@@ -9,10 +9,11 @@ using namespace std;
 #define HEART   "\xE2\x99\xA5"
 #define DIAMOND "\xE2\x99\xA6"
 
-void initial()
+const int number_of_cards = 52;
+
+void initial(int & number_of_players)
 {
   cout << "******Welcome to the game of Black Jack******" << endl;
-  int number_of_players;
   cout << "Number of Players(1-3) : ";
   cin >> number_of_players;
   while (number_of_players < 1 or number_of_players > 3)
@@ -23,8 +24,55 @@ void initial()
   }
 }
 
+void SetCard(int cards[])
+//set 52 poke cards
+//eg: 1 14 27 40 will represent 4 types of A
+{
+  for (int i = 0; i < 52; i++)
+  {
+    cards[i] = i;
+  }
+}
+
+void DealCards(int n, int cards[]) //deal a card randomly;
+{
+  int x, y;
+  cin >> x;
+  srand(x);
+  y = rand() % 52;
+  while (cards[y] == -1)
+  {
+    DealCards(n, cards);
+  }
+  n = y;
+  cards[y] = -1;
+}
+
+void InitialBanker(int banker[], int cards[])
+{
+  for (int i = 0; i < 2; i++)
+  {
+    DealCards(banker[i], cards);
+  }
+}
+
 int main()
 {
-  initial();
-  
+  int number_of_players;
+  initial(number_of_players);
+
+  int cards[52];
+  int banker[10];//use to store the cards for the banker for the game
+  int player[10];//use to store the cards for the player for the game
+
+  SetCard(cards);
+
+  char game = 'y';
+  while (game == 'y')
+  {
+    InitialBanker(banker, cards);
+    cout << "start a new round (y or n) ? : ";
+    cin >> game;
+  }
+
 }
