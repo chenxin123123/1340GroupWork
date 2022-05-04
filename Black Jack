@@ -455,7 +455,7 @@ int main()
             cout << "Banker Win" << endl;
             cout << "You lose " << wager << " HKD for this round" << endl;
             capital = capital - wager;
-            cout << "The capital you have: " << capital << endl;
+            cout << "The capital you have: " << capital << " HKD" << endl;
           }
         }
       }
