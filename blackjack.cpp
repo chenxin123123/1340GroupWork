@@ -171,12 +171,12 @@ int main()
   cin >> Game_Flag;
 
   // cin for capital
-  cout << "How much capacity will you push for this game? (At least 1000 & an integer): ";
+  cout << "How much capital will you push for this game? (At least 1000 & an integer): ";
   cin >> capital;
   while (capital < 1000)
   {
     cout << "Capital not meet requirement !" << endl;
-    cout << "How much capacity will you push for this game? (At least 10000 & an integer): ";
+    cout << "How much capital will you push for this game? (At least 10000 & an integer): ";
     cin >> capital;
   }
   cout << endl;
