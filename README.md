@@ -5,7 +5,7 @@ Group member: Chen Xin (3035952733), Zhang Zhen Yu (3033101768)
 
 Game and Game Rules;
 
-This is a traditional called Black Jack or points 21
+This is a traditional game called Black Jack or points 21
 
 Rules:
 
