@@ -9,7 +9,7 @@ This is a traditional called Black Jack or points 21
 
 Rules:
 
-1.There is a set of card includes 52 cards (all cards except the 2 jokers). 
+1.There is a set of pokecards includes 52 cards (all cards except the 2 jokers). 
 
 2.All cards will have value that equals to its cards number, except A, J, Q and K.
 
