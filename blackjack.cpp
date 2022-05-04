@@ -170,12 +170,12 @@ int main()
   cin >> Game_Flag;
 
   // cin for capital
-  cout << "Houw much capacity you will push for this game? (At least 1000 & an integer): ";
+  cout << "How much capacity you will push for this game? (At least 1000 & an integer): ";
   cin >> capital;
   while (capital < 1000)
   {
     cout << "Capital not meet requirement !" << endl;
-    cout << "Houw much capacity you will push for this game? (At least 10000 & an integer): ";
+    cout << "How much capacity you will push for this game? (At least 10000 & an integer): ";
     cin >> capital;
   }
   cout << endl;
@@ -186,12 +186,12 @@ int main()
 
     ShuffleCards(pokecards);
 
-    cout << "Houw much wager you will push for this game? (an integer): ";
+    cout << "How much wager you will push for this game? (an integer): ";
     cin >> wager;
     while (capital - wager < 0)
     {
       cout << "Wager can not larger than Capital!"  << endl;
-      cout << "Houw much wager you will push for this game? (an integer): ";
+      cout << "How much wager you will push for this game? (an integer): ";
       cin >> wager;
     }
     cout << endl;
