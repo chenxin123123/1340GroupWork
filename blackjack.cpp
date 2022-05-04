@@ -143,6 +143,7 @@ int calculator_MIN(int cards[], int num)
     position = cards[i] % 13;
     sum = sum + b[position];
   }
+  return sum;
 }
 
 bool Is_A(int cards[], int n)
@@ -467,7 +468,7 @@ int main()
       cout << "Start a new game? (y/n): ";
       cin >> Game_Flag;
     }
-    else if (capital < 0)
+    else if (capital <= 0)
     {
       cout << "You lose all your money" << endl;
       cout << "Game Over !" << endl;
