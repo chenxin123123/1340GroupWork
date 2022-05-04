@@ -380,7 +380,7 @@ int main()
         cout << "Banker also have Natural Black Jack" << endl;
         cout << "Tie" << endl;
         cout << "You do not earn or lose money" << endl;
-        cout << "The capital you have: " << capital << endl;
+        cout << "The capital you have: " << capital <<" HKD" <<  endl;
       }
       else
       {
@@ -388,7 +388,7 @@ int main()
         cout << "Player Win" << endl;
         cout << "You earn " << wager*1.5 << " HKD for this round." << endl;
         capital = capital + wager * 1.5;
-        cout << "The capital you have: " << capital << endl;
+        cout << "The capital you have: " << capital << " HKD" << endl;
       }
       cout << endl;
     }
@@ -401,7 +401,7 @@ int main()
         cout << "Player Win" << endl;
         cout << "You earn " << wager/2 << " HKD for this round" << endl;
         capital = capital + wager/2;
-        cout << "The capital you have: " << capital << endl;
+        cout << "The capital you have: " << capital << " HKD" << endl;
       }
       else
       {
@@ -409,7 +409,7 @@ int main()
         cout << "Banker Win" << endl;
         cout << "You lose " << wager/2 << " HKD for this round" << endl;
         capital = capital - wager/2;
-        cout << "The capital you have: " << capital << endl;
+        cout << "The capital you have: " << capital << " HKD" << endl;
       }
       cout << endl;
     }
@@ -421,7 +421,7 @@ int main()
         cout << "Banker Win" << endl;
         cout << "You lose " << wager << " HKD for this round" << endl;
         capital = capital - wager;
-        cout << "The capital you have: " << capital << endl;
+        cout << "The capital you have: " << capital << " HKD" << endl;
       }
       else if (Boom_A == 'N')
       {
@@ -431,7 +431,7 @@ int main()
           cout << "Player Win" << endl;
           cout << "You win " << wager << " HKD for this round" << endl;
           capital = capital + wager;
-          cout << "The capital you have: " << capital << endl;
+          cout << "The capital you have: " << capital << " HKD" << endl;
         }
         else if (Points_B <= 21)
         {
@@ -440,7 +440,7 @@ int main()
             cout << "Banker and Player have same points" << endl;
             cout << "Tie" << endl;
             cout << "You do not earn or lose money" << endl;
-            cout << "The capital you have: " << capital << endl;
+            cout << "The capital you have: " << capital << " HKD" << endl;
           }
           else if (Points_P > Points_B)
           {
@@ -448,7 +448,7 @@ int main()
             cout << "Player Win" << endl;
             cout << "You win " << wager << " HKD for this round" << endl;
             capital = capital + wager;
-            cout << "The capital you have: " << capital << endl;
+            cout << "The capital you have: " << capital << " HKD" << endl;
           }
           else if (Points_P < Points_B)
           {
