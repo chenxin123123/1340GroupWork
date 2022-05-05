@@ -371,3 +371,108 @@ int main()
 
     cout << endl;
 
+        //process result
+    if (flag_Natural_BJ == 'y')
+    {
+      cout << "Player gets Natural BlackJack" << endl;
+      if (Points_B == 21)
+      {
+        cout << "Banker also have Natural Black Jack" << endl;
+        cout << "Tie" << endl;
+        cout << "You do not earn or lose money" << endl;
+        cout << "The capital you have: " << capital <<" HKD" <<  endl;
+      }
+      else
+      {
+        cout << "Banker donot have Natural Black Jack" << endl;
+        cout << "Player Win" << endl;
+        cout << "You earn " << wager*1.5 << " HKD for this round." << endl;
+        capital = capital + wager * 1.5;
+        cout << "The capital you have: " << capital << " HKD" << endl;
+      }
+      cout << endl;
+    }
+    else if (flag_INSURANCE == 'y')
+    {
+      cout << "Player buy the insurance" << endl;
+      if (Points_B == 21)
+      {
+        cout << "Banker gets Natural BlackJack and Player has insurance" << endl;
+        cout << "Player Win" << endl;
+        cout << "You earn " << wager/2 << " HKD for this round" << endl;
+        capital = capital + wager/2;
+        cout << "The capital you have: " << capital << " HKD" << endl;
+      }
+      else
+      {
+        cout << "Banker does not have Natural BlackJack and Player has insurance" << endl;
+        cout << "Banker Win" << endl;
+        cout << "You lose " << wager/2 << " HKD for this round" << endl;
+        capital = capital - wager/2;
+        cout << "The capital you have: " << capital << " HKD" << endl;
+      }
+      cout << endl;
+    }
+    else if (flag_Natural_BJ == 'n' and flag_INSURANCE == 'n')
+    {
+      if (Boom_A == 'Y')
+      {
+        cout << "Player's points is greater than 21, Boom!" << endl;
+        cout << "Banker Win" << endl;
+        cout << "You lose " << wager << " HKD for this round" << endl;
+        capital = capital - wager;
+        cout << "The capital you have: " << capital << " HKD" << endl;
+      }
+      else if (Boom_A == 'N')
+      {
+        if (Points_B > 21)
+        {
+          cout << "Banker's points is greater than 21, Boom!" << endl;
+          cout << "Player Win" << endl;
+          cout << "You win " << wager << " HKD for this round" << endl;
+          capital = capital + wager;
+          cout << "The capital you have: " << capital << " HKD" << endl;
+        }
+        else if (Points_B <= 21)
+        {
+          if (Points_P == Points_B)
+          {
+            cout << "Banker and Player have same points" << endl;
+            cout << "Tie" << endl;
+            cout << "You do not earn or lose money" << endl;
+            cout << "The capital you have: " << capital << " HKD" << endl;
+          }
+          else if (Points_P > Points_B)
+          {
+            cout << "Player has larger points" << endl;
+            cout << "Player Win" << endl;
+            cout << "You win " << wager << " HKD for this round" << endl;
+            capital = capital + wager;
+            cout << "The capital you have: " << capital << " HKD" << endl;
+          }
+          else if (Points_P < Points_B)
+          {
+            cout << "Banker has larger points" << endl;
+            cout << "Banker Win" << endl;
+            cout << "You lose " << wager << " HKD for this round" << endl;
+            capital = capital - wager;
+            cout << "The capital you have: " << capital << " HKD" << endl;
+          }
+        }
+      }
+      cout << endl;
+    }
+
+    if (capital > 0)
+    {
+      cout << "Start a new game? (y/n): ";
+      cin >> Game_Flag;
+    }
+    else if (capital <= 0)
+    {
+      cout << "You lose all your money" << endl;
+      cout << "Game Over !" << endl;
+      Game_Flag = 'n';
+    }
+  }
+}
