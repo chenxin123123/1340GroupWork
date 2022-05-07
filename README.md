@@ -46,6 +46,17 @@ Rules:
 
 17.If the total capacity in the player's hand is 0, the game is over.
 
+Function of the codes:
+
+1. void Initial: Print out the initial condition.
+2. void ShuffleCards: Make sure the cards are in different order.
+3. void ShowCards: Print out the cards in the player's hand and the cards in banker's hand.
+4. int Calculator: Calculate the sum of the points carrried by the player and the banker.
+5. int Calculator_MAX: Control the movements of the banker.
+6. int Calculator_MIN: Control the movements of the banker.
+7. bool_Is_A: Determine if the player can buy the insurance or not.
+8. int main: Main function.
+
 Compilation instructions:
 
 1. Use a linux server
